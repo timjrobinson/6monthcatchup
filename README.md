@@ -13,7 +13,7 @@ The magic: Both people will get the exact same times when they enter the same em
 
 ## Technical Details
 
-- Uses MD5 hash of `email1+email2+year` and `email2+email1+year`
+- Uses SHA256 hash of `email1+email2+year` and `email2+email1+year`
 - Converts hash to number and mods by hours in the year (8760 or 8784 for leap years)
 - All processing happens client-side - no data is sent to any server
 - Generates standard .ics calendar files
