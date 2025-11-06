@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Month Catchup - Catch up every 6 months... or not.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Catch up every 6 months...<br>or not.</h1>
+        </header>
+
+        <main>
+            <section class="intro-section">
+                <p class="intro-lead">Have someone you want to catch up with but don't?</p>
+                <p class="intro-text">Organize a random chat every ~6 months.</p>
+
+                <div class="how-it-works">
+                    <p>Input 2 emails, the site picks two dates every year to catch up (via hashing the emails so it's the same dates every time).</p>
+                    <p>Download the ICS file or save to your calendar to connect with them for that hour on that day. How you connect is up to you.</p>
+                    <p>Reject times you can't make it, and be ships in the night, you didn't meet this time around.</p>
+                </div>
+
+                <p class="highlight">It's like bumping into each other, virtually.</p>
+            </section>
+
+            <form class="input-section" id="scheduleForm">
+                <div class="form-group">
+                    <label for="email1">Your Email:</label>
+                    <input type="email" id="email1" placeholder="your.email@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email2">Their Email:</label>
+                    <input type="email" id="email2" placeholder="their.email@example.com" required>
+                </div>
+
+                <button type="submit" id="generateBtn" class="primary-btn">Generate 10-Year Schedule</button>
+            </form>
+
+            <div id="results" class="results-section hidden">
+                <h2>Your Random Catchup Schedule (Next 10 Years)</h2>
+
+                <div id="eventsList" class="events-list"></div>
+
+                <div class="download-options">
+                    <h3>Add to Calendar</h3>
+                    <div class="button-group">
+                        <button id="downloadICS" class="calendar-btn primary">Download All Events (.ics)</button>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>How it works:</strong> We use a deterministic hash of both email addresses and the year to generate two random times per year for the next 10 years. Both people will get the same times when they enter the same email addresses.</p>
+                </div>
+            </div>
+            <section class="faq-section">
+                <h2>FAQ</h2>
+
+                <div class="faq-item">
+                    <h3>Why create this?</h3>
+                    <p>Living in big cities is great because of serendipitous moments where you bump into someone and have an interesting conversation that may change the course of your life. The online world is missing this. I built 6monthcatchup to give those serendipitous catch-ups with friends or past colleagues no matter where you're at in the world.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>All processing happens in your browser. No data is sent to any server.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

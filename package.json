@@ -1,0 +1,15 @@
+{
+  "name": "6-month-catchup",
+  "version": "1.0.0",
+  "description": "A static website to schedule random catch-up calls for the next 10 years",
+  "scripts": {
+    "dev": "npx http-server -p 8080 -o"
+  },
+  "keywords": [
+    "calendar",
+    "scheduler",
+    "catch-up"
+  ],
+  "author": "",
+  "license": "MIT"
+}
